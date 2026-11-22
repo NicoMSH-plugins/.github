@@ -1,7 +1,7 @@
-# Minimum length required for issue/PR descriptions
+# Mindestlänge für Issue- und Pull-Request-Beschreibungen (in Zeichen)
 minBodyLength: 50
 
-# Enable/disable commands
+# Verfügbare Slash-Commands in Kommentaren (/wip, /close, /label usw.)
 commands:
     wip: true
     approve: true
@@ -10,7 +10,7 @@ commands:
     merge: true
     requestInfo: true
 
-# Enable/disable automations
+# Automatische Aktionen bei neuen Issues, PRs und Reviews
 automations:
     addReadyForReview: true
     addApprovedLabel: true
@@ -21,7 +21,7 @@ automations:
     welcomeContributor: true
     welcomeIssue: true
 
-# Configure labels
+# Labels (englische Standard-Bezeichnungen bleiben kompatibel für alle GitHub-Nutzer)
 labels:
     wip: "work in progress"
     readyForReview: "ready for review"
@@ -35,14 +35,27 @@ labels:
     fixed: "fixed"
     implemented: "implemented"
 
-# Configure messages
+# Zweisprachige Bot-Antworten (Deutsch & Englisch)
 messages:
     welcomeContributor: |
-        Thanks for your first pull request, @{user}! 🎉
-        The team will review your changes soon.
+        Danke für deinen ersten Pull Request, @{user}! 🎉
+        Ich schaue mir deine Änderungen in Kürze an.
+
+        ---
+        *Thanks for your first pull request, @{user}! I will review your changes soon.*
     welcomeIssue: |
-        Thanks for opening your first issue, @{user}! 🎉
+        Danke für dein erstes Issue, @{user}! 🎉
+        Bitte stelle sicher, dass du deine verwendete Version (KeyHelp / Owncast) und ggf. relevante Logs angegeben hast.
+
+        ---
+        *Thanks for opening your first issue, @{user}! Please make sure you included your version (KeyHelp / Owncast) and any relevant logs.*
     requestMoreInfo: |
-        Hey @{user}! Please provide more details in your {type}.
+        Hallo @{user}! Deine Beschreibung ist noch etwas kurz – bitte ergänze weitere Details (z. B. Schritte zum Nachstellen, Version oder Fehlermeldungen) in deinem {type}.
+
+        ---
+        *Hey @{user}! Please provide more details (e.g. steps to reproduce, version, or error logs) in your {type}.*
     moreInfoAdded: |
-        Thanks @{user} for adding more information!
+        Danke @{user} für das Ergänzen der Informationen! Das Label wurde automatisch aktualisiert.
+
+        ---
+        *Thanks @{user} for adding more information! The label has been updated automatically.*
